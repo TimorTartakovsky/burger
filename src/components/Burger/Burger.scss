@@ -1,0 +1,50 @@
+$media-query-supporting-min-width1: 1000px;
+$media-query-supporting-min-height1: 700px;
+$media-query-1000-700-width: 700px;
+$media-query-1000-700-height: 600px;
+
+$media-query-supporting-min-width2: 500px;
+$media-query-supporting-min-height2: 401px;
+$media-query-500-401-width: 450px;
+$media-query-500-401-height: 400px;
+
+$media-query-supporting-min-width3: 500px;
+$media-query-supporting-min-height3: 400px;
+$media-query-500-400-width: 350px;
+$media-query-500-400-height: 300px;
+
+$burger-width: 100%;
+$burger-height: 250px;
+$burger-font-size: 18px;
+.burger {
+  width: $burger-width;
+  margin: auto;
+  height: $burger-height;
+  overflow: scroll;
+  text-align: center;
+  font-weight: bold;
+  font-size: $burger-font-size;
+}
+
+@media (min-width: $media-query-supporting-min-width1) and (min-height: $media-query-supporting-min-height1) {
+  .burger {
+    width: $media-query-1000-700-width;
+    height: $media-query-1000-700-height;
+  }
+}
+
+@media (min-width: $media-query-supporting-min-width2) and (min-height: $media-query-supporting-min-height2) {
+  .burger {
+    width: $media-query-500-401-width;
+    height: $media-query-500-401-height;
+  }
+}
+
+@media (min-width: $media-query-supporting-min-width3) and (min-height: $media-query-supporting-min-height3) {
+  .burger {
+    width: $media-query-500-400-width;
+    height: $media-query-500-400-height;
+  }
+}
+
+

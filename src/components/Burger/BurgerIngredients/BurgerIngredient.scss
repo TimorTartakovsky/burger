@@ -1,0 +1,169 @@
+$main-ingredient-elements-width: 80%;
+$ingredients-full-width: 100%;
+$ingredients-common-margin: 2% auto;
+$ingredients-bread-box-shadow: inset -15px 0 #c15711;
+$bread-bottom-radius: 13%;
+$bread-bottom-border-radius: 0 0 30px 30px;
+$bread-bottom-background: linear-gradient(#F08E4A, #e27b36);
+.breadBottom {
+  height: $bread-bottom-radius;
+  width: $main-ingredient-elements-width;
+  background: $bread-bottom-background;
+  border-radius: $bread-bottom-border-radius;
+  box-shadow: $ingredients-bread-box-shadow;
+  margin: $ingredients-common-margin;
+}
+
+$bread-top-radius: 50% 50% 0 0;
+$bread-top-background: linear-gradient(#bc581e, #e27b36);
+$bread-top-height: 20%;
+.breadTop {
+  height: $bread-top-height;
+  width: $main-ingredient-elements-width;
+  background: $bread-top-background;
+  border-radius: $bread-top-radius;
+  box-shadow: $ingredients-bread-box-shadow;
+  margin: $ingredients-common-margin;
+  position: relative;
+}
+
+$seeds1-width: 10%;
+$seeds1-height: 10%;
+$white-color: #fff;
+$seeds1-left: 30%;
+$seeds1-right: 50%;
+$seeds1-border-radius: 40%;
+$seeds1-transform: rotate(-20deg);
+$seeds1-box-shadow: inset -2px -3px #c9c9c9;
+.seeds1 {
+  width: $seeds1-width;
+  height: $seeds1-height;
+  position: absolute;
+  background-color: $white-color;
+  left: $seeds1-left;
+  top: $seeds1-right;
+  border-radius: $seeds1-border-radius;
+  transform: $seeds1-transform;
+  box-shadow: $seeds1-box-shadow;
+
+
+  $empty-content: '';
+  $seeds1-after-left: -170%;
+  $seeds1-after-top: -260%;
+  $seeds1-after-transform: rotate(60deg);
+  $seeds1-after-box-shadow: inset -1px 2px #c9c9c9;
+  &:after {
+    content: $empty-content;
+    width: $ingredients-full-width;
+    height: $ingredients-full-width;
+    position: absolute;
+    background-color: $white-color;
+    left: $seeds1-after-left;
+    top: $seeds1-after-top;
+    border-radius: $seeds1-border-radius;
+    transform: $seeds1-after-transform;
+    box-shadow: $seeds1-after-box-shadow;
+  }
+
+  $seeds1-before-left: 180%;
+  $seeds1-before-top: -50%;
+  $seeds1-before-radius: 40%;
+  $seeds1-before-box-shadow: inset -1px -3px #c9c9c9;
+  &:before {
+    content: $empty-content;
+    width: $ingredients-full-width;
+    height: $ingredients-full-width;
+    position: absolute;
+    background-color: $white-color;
+    left: $seeds1-before-left;
+    top: $seeds1-before-top;
+    border-radius: $seeds1-before-radius;
+    transform: $seeds1-after-transform;
+    box-shadow: $seeds1-before-box-shadow;
+  }
+}
+
+$seeds2-width: 10%;
+$seeds2-height: 15%;
+$seeds2-left: 64%;
+$seeds2-top: 50%;
+$seeds2-border-radius: 40%;
+$seeds2-transform: rotate(10deg);
+$seeds2-box-shadow: inset -3px 0 #c9c9c9;
+.seeds2 {
+  width: $seeds2-width;
+  height: $seeds2-height;
+  position: absolute;
+  background-color: $white-color;
+  left: $seeds2-left;
+  top: $seeds2-top;
+  border-radius: $seeds2-border-radius;
+  transform: $seeds2-transform;
+  box-shadow: $seeds2-box-shadow;
+
+  $empty-content: '';
+  $seeds2-before-left: 150%;
+  $seeds2-before-top: -130%;
+  $seeds2-before-border-radius: 40%;
+  $seeds2-before-transform: rotate(90deg);
+  $seeds2-before-box-shadow: inset 1px 3px #c9c9c9;
+  &:before {
+    content: $empty-content;
+    width: $ingredients-full-width;
+    height: $ingredients-full-width;
+    position: absolute;
+    background-color: $white-color;
+    left: $seeds2-before-left;
+    top: $seeds2-before-top;
+    border-radius: $seeds2-before-border-radius;
+    transform: $seeds2-before-transform;
+    box-shadow: $seeds2-before-box-shadow;
+  }
+}
+
+$meat-height: 8%;
+$meat-border-radius: 15px;
+$meat-background: linear-gradient(#7f3608, #702e05);
+.meat {
+  width: $main-ingredient-elements-width;
+  height: $meat-height;
+  background: $meat-background;
+  margin: $ingredients-common-margin;
+  border-radius: $meat-border-radius;
+}
+
+$cheese-width: 90%;
+$cheese-height: 4.5%;
+$cheese-background: linear-gradient(#f4d004, #d6bb22);
+$cheese-border-radius: 20px;
+.cheese {
+  width: $cheese-width;
+  height: $cheese-height;
+  margin: $ingredients-common-margin;
+  background: $cheese-background;
+  border-radius: $cheese-border-radius;
+}
+
+$salad-width: 85%;
+$salad-height: 7%;
+$salad-background: linear-gradient(#228c1d, #91ce50);
+$salad-border-radius: 20px;
+.salad {
+  width: $salad-width;
+  height: $salad-height;
+  margin: $ingredients-common-margin;
+  background: $salad-background;
+  border-radius: $salad-border-radius;
+}
+
+$bacon-height: 3%;
+$bacon-background: linear-gradient(#bf3813, #c45e38);
+.bacon {
+  width: $main-ingredient-elements-width;
+  height: $bacon-height;
+  background: $bacon-background;
+  margin: $ingredients-common-margin;
+}
+
+
+

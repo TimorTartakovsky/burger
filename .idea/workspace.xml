@@ -1,22 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b7dd8aa6-3a46-4635-ae26-304f0b4b003c" name="eject configuration" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/burger.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    <list default="true" id="47353471-7f9c-43c0-a1e7-8d8088ab8698" name="project structure" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/Burger/Burger.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Burger/Burger.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Burger/BurgerIngredients/BurgerIngredient.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Burger/BurgerIngredients/BurgerIngredient.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Layout/Layout.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Layout/Layout.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/consts/application_consts.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/containers/BurgerBuilder/BurgerBuilder.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hoc/Auxe.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/webpack.config.dev.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/webpack.config.dev.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/webpack.config.prod.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/webpack.config.prod.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logo.svg" beforeDir="false" />
     </list>
-    <list id="32f27f3e-2cf2-49f4-b3aa-4a1d5481049b" name="ignore" comment="" />
+    <list id="32ff40e2-068a-4ff8-9a88-d1fedc0edecd" name="ignore" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,9 +36,9 @@
         <counts>
           <entry key="gitignore" value="1" />
           <entry key="html" value="1" />
-          <entry key="js" value="8" />
+          <entry key="js" value="26" />
           <entry key="json" value="1" />
-          <entry key="scss" value="2" />
+          <entry key="scss" value="13" />
           <entry key="xml" value="3" />
         </counts>
       </usages-collector>
@@ -47,26 +46,26 @@
         <counts>
           <entry key="HTML" value="1" />
           <entry key="JSON" value="1" />
-          <entry key="JavaScript" value="8" />
+          <entry key="JavaScript" value="26" />
           <entry key="PLAIN_TEXT" value="1" />
-          <entry key="SCSS" value="2" />
+          <entry key="SCSS" value="13" />
           <entry key="XML" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="html" value="1" />
-          <entry key="js" value="73" />
-          <entry key="scss" value="8" />
-          <entry key="txt" value="10" />
+          <entry key="js" value="1222" />
+          <entry key="scss" value="423" />
+          <entry key="txt" value="34" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="1" />
-          <entry key="JavaScript" value="73" />
-          <entry key="PLAIN_TEXT" value="10" />
-          <entry key="SCSS" value="8" />
+          <entry key="JavaScript" value="1222" />
+          <entry key="PLAIN_TEXT" value="34" />
+          <entry key="SCSS" value="423" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages">
@@ -84,15 +83,23 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/index.scss">
+        <entry file="file://$PROJECT_DIR$/src/components/Burger/Burger.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+            <state relative-caret-position="394">
+              <caret line="44" column="1" lean-forward="true" selection-start-line="44" selection-start-column="1" selection-end-line="44" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="SCSS File" />
+      </list>
+    </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -116,9 +123,18 @@
       <list>
         <option value="$PROJECT_DIR$/config/webpack.config.dev.js" />
         <option value="$PROJECT_DIR$/config/webpack.config.prod.js" />
-        <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/src/index.scss" />
+        <option value="$PROJECT_DIR$/src/hoc/Auxe.js" />
+        <option value="$PROJECT_DIR$/src/App.js" />
+        <option value="$PROJECT_DIR$/src/components/Layout/Layout.scss" />
+        <option value="$PROJECT_DIR$/src/components/Layout/Layout.js" />
+        <option value="$PROJECT_DIR$/src/consts/application_consts.js" />
+        <option value="$PROJECT_DIR$/src/containers/BurgerBuilder/BurgerBuilder.js" />
+        <option value="$PROJECT_DIR$/src/components/Burger/Burger.js" />
+        <option value="$PROJECT_DIR$/src/components/Burger/BurgerIngredients/BurgerIngredient.js" />
+        <option value="$PROJECT_DIR$/src/components/Burger/BurgerIngredients/BurgerIngredient.scss" />
+        <option value="$PROJECT_DIR$/src/components/Burger/Burger.scss" />
       </list>
     </option>
   </component>
@@ -137,8 +153,8 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1433" />
-    <option name="y" value="125" />
+    <option name="x" value="3273" />
+    <option name="y" value="69" />
     <option name="width" value="1936" />
     <option name="height" value="1096" />
   </component>
@@ -159,12 +175,41 @@
             <path>
               <item name="burger" type="b2602c69:ProjectViewProjectNode" />
               <item name="burger" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="burger" type="b2602c69:ProjectViewProjectNode" />
               <item name="burger" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="burger" type="b2602c69:ProjectViewProjectNode" />
+              <item name="burger" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="Burger" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="burger" type="b2602c69:ProjectViewProjectNode" />
+              <item name="burger" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="Burger" type="462c0819:PsiDirectoryNode" />
+              <item name="BurgerIngredients" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="burger" type="b2602c69:ProjectViewProjectNode" />
+              <item name="burger" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="containers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="burger" type="b2602c69:ProjectViewProjectNode" />
+              <item name="burger" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="containers" type="462c0819:PsiDirectoryNode" />
+              <item name="BurgerBuilder" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -177,8 +222,9 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1535269639833" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1535281033282" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Dynamic-Landing-Page-A-B-Testing" />
+    <property name="list.type.of.created.stylesheet" value="SCSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="C:\Users\Teymur_Tartakovsky\git\burger\node_modules\eslint" />
@@ -202,13 +248,14 @@
   </component>
   <component name="TaskManager">
     <task id="Default" summary="Default task">
-      <changelist id="32f27f3e-2cf2-49f4-b3aa-4a1d5481049b" name="Default Changelist" comment="" />
+      <changelist id="" name="Default Changelist" comment="" />
       <created>1535268505091</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1535270058814</updated>
+      <updated>1535270938989</updated>
       <workItem from="1535268508758" duration="1056000" />
       <workItem from="1535270030202" duration="27000" />
+      <workItem from="1535270914100" duration="25000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1535268558918</created>
@@ -224,24 +271,40 @@
       <option name="project" value="LOCAL" />
       <updated>1535268893541</updated>
     </task>
-    <task active="true" id="LOCAL-00003" summary="eject configuration">
-      <changelist id="b7dd8aa6-3a46-4635-ae26-304f0b4b003c" name="eject configuration" comment="" />
+    <task id="LOCAL-00003" summary="eject configuration">
+      <changelist id="" name="eject configuration" comment="" />
       <created>1535270058278</created>
       <option name="number" value="00003" />
       <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
-      <updated>1535270058981</updated>
-      <workItem from="1535270059007" duration="661000" />
+      <updated>1535270913964</updated>
+      <workItem from="1535270059007" duration="852000" />
     </task>
-    <option name="localTasksCounter" value="4" />
-    <option name="trackContextForNewChangelist" value="true" />
+    <task id="LOCAL-00004" summary="eject configuration">
+      <created>1535270896788</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1535270896789</updated>
+    </task>
+    <task active="true" id="LOCAL-00005" summary="project structure">
+      <changelist id="47353471-7f9c-43c0-a1e7-8d8088ab8698" name="project structure" comment="" />
+      <changelist id="32ff40e2-068a-4ff8-9a88-d1fedc0edecd" name="ignore" comment="" />
+      <created>1535270938957</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1535270938997</updated>
+      <workItem from="1535270939015" duration="5564000" />
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1773000" />
+    <option name="totallyTimeSpent" value="7553000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1358" y="-8" width="1936" height="1096" extended-state="6" />
+    <frame x="3278" y="-8" width="1936" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25266525" />
@@ -282,8 +345,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init" />
-    <option name="LAST_COMMIT_MESSAGE" value="init" />
-    <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
+    <MESSAGE value="eject configuration" />
+    <option name="LAST_COMMIT_MESSAGE" value="eject configuration" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.gitignore">
@@ -296,27 +359,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="7" lean-forward="true" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/webpack.config.dev.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="169" column="69" selection-start-line="168" selection-start-column="18" selection-end-line="169" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/webpack.config.prod.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="182" column="23" lean-forward="true" selection-start-line="182" selection-start-column="23" selection-end-line="182" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
         </state>
       </provider>
     </entry>
@@ -337,10 +379,98 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/config/webpack.config.dev.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/webpack.config.prod.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hoc/Auxe.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/index.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="11" lean-forward="true" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Layout/Layout.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="1" lean-forward="true" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Layout/Layout.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="27" lean-forward="true" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/consts/application_consts.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/BurgerBuilder/BurgerBuilder.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="10" lean-forward="true" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Burger/Burger.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="82" selection-start-line="11" selection-start-column="82" selection-end-line="11" selection-end-column="82" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Burger/BurgerIngredients/BurgerIngredient.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="20" column="53" selection-start-line="20" selection-start-column="53" selection-end-line="20" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Burger/BurgerIngredients/BurgerIngredient.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="638">
+          <caret line="103" column="21" selection-start-line="103" selection-start-column="21" selection-end-line="103" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Burger/Burger.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="394">
+          <caret line="44" column="1" lean-forward="true" selection-start-line="44" selection-start-column="1" selection-end-line="44" selection-end-column="1" />
         </state>
       </provider>
     </entry>

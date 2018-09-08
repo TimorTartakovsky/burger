@@ -1,0 +1,13 @@
+$backdrop-size: 100%;
+$backdrop-position: 0;
+$backdrop-z-index: 100;
+$backdrop-background-color: rgba(0, 0, 0, 0.5);
+.backdrop {
+  position: fixed;
+  width: $backdrop-size;
+  height: $backdrop-size;
+  z-index: $backdrop-z-index;
+  left: $backdrop-position;
+  top: $backdrop-position;
+  background-color: $backdrop-background-color;
+}

@@ -6,6 +6,7 @@ const buildControl = (props) => (
     <div className={ classes.buildControl }>
         <div className={ classes.Label }>{ props.label }</div>
         <button className={ classes.buildControl.Less }
+                disabled={ props.disabled }
                 onClick={ props.removed }>
             { ApplicationMessages.buildControls.buildControl.btnLess }
         </button>

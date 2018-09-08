@@ -25,7 +25,7 @@ const burger = ( props ) => {
     let transformedIngredients = transformIngredients(props.ingredients);
 
     if (!Array.isArray(transformedIngredients)) {
-        transformedIngredients = <p>{ ApplicationMessages.burgerBuilder.noIngredients }</p>
+        transformedIngredients = <p>{ ApplicationMessages.burgerBuilderComponent.noIngredients }</p>
     }
 
     return (

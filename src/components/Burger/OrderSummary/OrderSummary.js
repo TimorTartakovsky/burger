@@ -16,15 +16,15 @@ const orderSummary = (props) => {
         });
     return (
         <Aux>
-            <h3>{ ApplicationMessages.orderSummary.yourOrder }</h3>
-            <p>{ ApplicationMessages.orderSummary.defaultDescription }</p>
+            <h3>{ ApplicationMessages.orderSummaryComponent.yourOrder }</h3>
+            <p>{ ApplicationMessages.orderSummaryComponent.defaultDescription }</p>
             <ul>
                 { ingredientSummary }
             </ul>
-            <p><strong>{ ApplicationMessages.orderSummary.totalPrice + props.price.toFixed(2)}</strong></p>
-            <p>{ ApplicationMessages.orderSummary.continueCheck }</p>
-            <Button clicked={ props.purchaseCanceled } btnType={ BTN_TYPES.danger }>{ ApplicationMessages.orderSummary.cancelBtn }</Button>
-            <Button clicked={ props.purchaseContinued } btnType={ BTN_TYPES.success }>{ ApplicationMessages.orderSummary.continueBtn }</Button>
+            <p><strong>{ ApplicationMessages.orderSummaryComponent.totalPrice + props.price.toFixed(2)}</strong></p>
+            <p>{ ApplicationMessages.orderSummaryComponent.continueCheck }</p>
+            <Button clicked={ props.purchaseCanceled } btnType={ BTN_TYPES.danger }>{ ApplicationMessages.orderSummaryComponent.cancelBtn }</Button>
+            <Button clicked={ props.purchaseContinued } btnType={ BTN_TYPES.success }>{ ApplicationMessages.orderSummaryComponent.continueBtn }</Button>
         </Aux>
     )
 

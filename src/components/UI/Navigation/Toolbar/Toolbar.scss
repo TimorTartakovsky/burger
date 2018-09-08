@@ -1,0 +1,29 @@
+$toolbar-height: 56px;
+$toolbar-width: 100%;
+$toolbar-nav-height: $toolbar-width;
+$toolbar-top: 0;
+$toolbar-left: $toolbar-top;
+$toolbar-padding: 0 20px;
+$toolbar-background-color: #703B09;
+$toolbar-z-index: 90;
+
+.toolbar {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  height: $toolbar-height;
+  width: $toolbar-width;
+  top: $toolbar-top;
+  left: $toolbar-left;
+  padding: $toolbar-padding;
+  background-color: $toolbar-background-color;
+  z-index: $toolbar-z-index;
+  .nav {
+    height: $toolbar-nav-height;
+  }
+}
+
+
+

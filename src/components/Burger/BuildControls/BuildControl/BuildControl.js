@@ -8,11 +8,11 @@ const buildControl = (props) => (
         <button className={ classes.buildControl.Less }
                 disabled={ props.disabled }
                 onClick={ props.removed }>
-            { ApplicationMessages.buildControls.buildControl.btnLess }
+            { ApplicationMessages.buildControlsComponent.buildControl.btnLess }
         </button>
         <button className={ classes.buildControl.More }
                 onClick={ props.added }>
-            { ApplicationMessages.buildControls.buildControl.btnMore }
+            { ApplicationMessages.buildControlsComponent.buildControl.btnMore }
         </button>
     </div>
 );

@@ -6,7 +6,7 @@ import ApplicationMessages from "../../../messages/ApplicationMessages";
 
 const buildControls = (props) => (
     <div className={classes.buildControls}>
-        <p><strong>{ ApplicationMessages.buildControls.currentPrice + props.price.toFixed(2) }</strong></p>
+        <p><strong>{ ApplicationMessages.buildControlsComponent.currentPrice + props.price.toFixed(2) }</strong></p>
         { BUILDER_CONTROLS.map( ctrl => (
             <BuildControl
                 key={ ctrl.label }
@@ -19,7 +19,7 @@ const buildControls = (props) => (
         <button className={classes.orderButton}
                 onClick={ props.ordered }
                 disabled={ !props.purchasable }>
-            { ApplicationMessages.buildControls.orderButton }
+            { ApplicationMessages.buildControlsComponent.orderButton }
         </button>
     </div>
 

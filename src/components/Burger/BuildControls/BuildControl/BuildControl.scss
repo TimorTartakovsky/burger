@@ -1,0 +1,74 @@
+$build-control-margin: 5px 0;
+$build-control-label-padding: 10px;
+$build-control-label-width: 80px;
+
+.Label {
+  font-weight: bold;
+  padding: $build-control-label-padding;
+  width: $build-control-label-width;
+}
+
+.buildControl {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: $build-control-margin;
+
+  $build-control-button-padding: 5px;
+  $build-control-button-margin: 0 5px;
+  $build-control-button-width: 80px;
+  $build-control-button-border: 1px solid #AA6817;
+  $build-control-button-white-color: #fff;
+  $build-control-button-gray-color: #ccc;
+  button {
+    display: block;
+    font: inherit;
+    cursor: pointer;
+    outline: none;
+    padding: $build-control-button-padding;
+    margin: $build-control-button-margin;
+    width: $build-control-button-width;
+    border: $build-control-button-border;
+
+    $build-control-button-disabled-background-color: #AC9980;
+    $build-control-button-disabled-border: 1px solid #7E7365;
+    &:disabled {
+      cursor: default;
+      background-color: $build-control-button-disabled-background-color;
+      border: $build-control-button-disabled-border;
+      color: $build-control-button-gray-color;
+    }
+
+    $build-control-button-disabled-hover-background-color: #AC9980;
+    &:hover:disabled {
+      cursor: not-allowed;
+      background-color: $build-control-button-disabled-hover-background-color;
+      color: $build-control-button-gray-color;
+    }
+
+    $build-control-button-less-background-color: #D39952;
+    $build-control-button-less-hover-action-background-color: #DAA972;
+    &.Less {
+      background-color: $build-control-button-less-background-color;
+      color: $build-control-button-white-color;
+      &:active,
+      &:hover {
+        background-color: $build-control-button-less-hover-action-background-color;
+        color: $build-control-button-white-color;
+      }
+    }
+
+    $build-control-button-more-background-color: #8F5E1E;
+    $build-control-button-more-hover-active-background-color: #99703F;
+    &.More {
+      background-color: $build-control-button-more-background-color;
+      color: $build-control-button-white-color;
+      &:active,
+      &:hover {
+        background-color: $build-control-button-more-hover-active-background-color;
+        color: $build-control-button-white-color;
+      }
+    }
+
+  }
+}

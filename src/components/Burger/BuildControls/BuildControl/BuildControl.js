@@ -1,0 +1,19 @@
+import React from 'react';
+import classes from './BuildControl.scss';
+import ApplicationMessages from "../../../../messages/ApplicationMessages";
+
+const buildControl = (props) => (
+    <div className={ classes.buildControl }>
+        <div className={ classes.Label }>{ props.label }</div>
+        <button className={ classes.buildControl.Less }
+                onClick={ props.removed }>
+            { ApplicationMessages.buildControls.buildControl.btnLess }
+        </button>
+        <button className={ classes.buildControl.More }
+                onClick={ props.added }>
+            { ApplicationMessages.buildControls.buildControl.btnMore }
+        </button>
+    </div>
+);
+
+export default buildControl;

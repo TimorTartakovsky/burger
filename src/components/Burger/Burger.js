@@ -11,7 +11,7 @@ const transformIngredients = (ingredients) => {
             .map( ingredientKey => {
                 return [...Array(ingredients[ingredientKey])]
                     .map((_, index) => {
-                        return <BurgerIngredient type={ ingredientKey + index } type={ ingredientKey }/>
+                        return <BurgerIngredient key={ ingredientKey + index } type={ ingredientKey }/>
                     });
             })
             .reduce((mainArray, element) => {

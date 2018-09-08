@@ -1,0 +1,17 @@
+$build-controls-width: 100%;
+$build-controls-background-color: #CF8F2E;
+$build-controls-box-shadow: 0 2px 1px #ccc;
+$build-controls-padding: 10px 0;
+
+.buildControls {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  margin: auto;
+  box-shadow: $build-controls-box-shadow;
+  width: $build-controls-width;
+  background-color: $build-controls-background-color;
+  padding: $build-controls-padding;
+}
+
+

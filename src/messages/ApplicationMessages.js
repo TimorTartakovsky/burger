@@ -12,6 +12,9 @@ const ApplicationMessages = {
         }
     },
     orderSummary: {
+        totalPrice: 'Total price: ',
+        cancelBtn: 'CANCEL',
+        continueBtn: 'CONTINUE',
         yourOrder: 'Your order',
         defaultDescription: 'A delicious burger with the following ingredients:',
         continueCheck: 'Continue to Checkout?',

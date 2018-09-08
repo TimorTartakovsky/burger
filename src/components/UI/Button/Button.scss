@@ -1,0 +1,32 @@
+$button-padding: 10px;
+$button-margin: $button-padding;
+$button-margin-left: 0;
+$button-padding-left: $button-margin-left;
+.button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  outline: none;
+  cursor: pointer;
+  font: inherit;
+  font-weight: bold;
+  padding: $button-padding;
+  margin: $button-margin;
+
+  &:first-of-type {
+    margin-left: $button-margin-left;
+    padding-left: $button-padding-left;
+  }
+}
+
+$button-success-color: #5C9210;
+.success {
+  color: $button-success-color;
+}
+
+$button-danger-color: #944317;
+.danger {
+  color: $button-danger-color;
+}
+
+

@@ -6,7 +6,7 @@ export const BURGER_INGREDIENTS_CONST = {
     cheese: 'cheese',
     salad: 'salad',
     bacon: 'bacon',
-}
+};
 
 export const BUILDER_CONTROLS = [
     {label: 'Salad', type: BURGER_INGREDIENTS_CONST.salad},
@@ -20,6 +20,11 @@ export const INGREDIENT_PRICES = {
     cheese: 0.4,
     meat: 1.3,
     bacon: 0.7,
-}
+};
+
+export const BTN_TYPES = {
+    success: 'success',
+    danger: 'danger',
+};
 
 

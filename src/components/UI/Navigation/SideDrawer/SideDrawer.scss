@@ -1,0 +1,46 @@
+$side-drawer-width: 280px;
+$side-drawer-max-width: 70%;
+$side-drawer-max-size: 100%;
+$zero: 0;
+$side-drawer-z-index: 200;
+$side-drawer-regular-color: #fff;
+$side-drawer-padding: 32px 16px;
+$side-drawer-transition: transform 0.3s ease-out;
+
+.sideDrawer {
+  position: fixed;
+  box-sizing: border-box;
+  width: $side-drawer-width;
+  max-width: $side-drawer-max-width;
+  height: $side-drawer-max-size;
+  left: $zero;
+  top: $zero;
+  z-index: $side-drawer-z-index;
+  background-color: $side-drawer-regular-color;
+  padding: $side-drawer-padding;
+  transition: $side-drawer-transition;
+}
+
+$side-drawer-transition-screen-min-width-500: 500px;
+
+@media (min-width: $side-drawer-transition-screen-min-width-500) {
+  .sideDrawer {
+    display: none;
+  }
+}
+
+.open {
+  transform: translateX(0);
+}
+
+.close {
+  transform: translateX(-100%);
+}
+
+.logo {
+  height: 12%;
+}
+
+
+
+

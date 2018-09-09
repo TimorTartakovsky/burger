@@ -4,7 +4,7 @@ import classes from './Logo.scss';
 
 const logo = (props) => (
     <div className={ classes.logo }>
-        <img className='logoImage' src={ image } alt="Logo image" />
+        <img style={{height: props.height}} src={ image } alt="Logo image" />
     </div>
 );
 

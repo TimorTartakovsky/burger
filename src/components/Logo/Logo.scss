@@ -1,12 +1,12 @@
 $logo-background-color: #fff;
 $logo-background-padding: 8px;
 $logo-elements-size: 100%;
-$logo-size: 80%;
+
 .logo {
   box-sizing: border-box;
   background-color: $logo-background-color;
   padding: $logo-background-padding;
-  height: $logo-size;
+  height: $logo-elements-size;
 
   img {
     height: $logo-elements-size;

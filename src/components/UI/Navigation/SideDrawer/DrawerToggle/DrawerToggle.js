@@ -6,7 +6,9 @@ import classes from './DrawerToggle.scss';
 const drawerToggle = (props) => (
     <div className={ classes.drawerToggle }
          onClick={ props.clicked }>
-        <div>{ ApplicationMessages.toolbarComponent.menu }</div>
+        <div title={ ApplicationMessages.toolbarComponent.menu }></div>
+        <div title={ ApplicationMessages.toolbarComponent.menu }></div>
+        <div title={ ApplicationMessages.toolbarComponent.menu }></div>
     </div>
 );
 

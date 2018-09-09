@@ -2,7 +2,7 @@ import React from 'react';
 import classes from './Toolbar.scss';
 import ApplicationMessages from "../../../../messages/ApplicationMessages";
 import NavigationItems from '../NavigationItems/NavigationItems';
-import DrawerToggle from '../SideDrawer/SideDrawer';
+import DrawerToggle from '../SideDrawer/DrawerToggle/DrawerToggle';
 import Logo from '../../../Logo/Logo';
 
 const toolbar = (props) => (

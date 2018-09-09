@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Aux from '../../../hoc/Auxe';
+import Aux from '../../../hoc/Auxe/Auxe';
 import Button from '../../UI/Button/Button';
 import ApplicationMessages from "../../../messages/ApplicationMessages";
 import {BTN_TYPES} from "../../../consts/application_consts";

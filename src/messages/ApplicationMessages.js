@@ -15,6 +15,21 @@ const ApplicationMessages = {
         menu: 'MENU',
         logo: 'LOGO'
     },
+    contactDataComponent: {
+     title: 'Enter your Contact Data',
+     orderBtn: 'ORDER',
+     form: {
+         fullNamePlaceholder: 'enter full name',
+         emailPlaceholder: 'enter e-mail address',
+         aptPlaceholder: 'enter apartment',
+         cityPlaceholder: 'enter city',
+         countryPlaceholder: 'enter country',
+         elevatorPlaceholder: 'enter elevator info',
+         floorPlaceholder: 'enter floor number',
+         streetPlaceholder: 'enter street',
+         zipCodePlaceholder: 'enter zip code',
+     }
+    },
     orderSummaryComponent: {
         totalPrice: 'Total price: ',
         cancelBtn: 'CANCEL',

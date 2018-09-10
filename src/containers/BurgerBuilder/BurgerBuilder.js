@@ -76,29 +76,45 @@ class BurgerBuilder extends Component {
     }
 
     purchaseContinueHandler = () => {
-        this.setState({loading: true});
-        const order = {
-            ingredients: this.state.ingredients,
-            price: this.state.totalPrice,
-            customer: {
-               fullName: 'Timor Tartakovsky',
-               address: {
-                   country: 'Israel',
-                   city: 'Bat Yam',
-                   street: 'Balfor 11',
-                   apt: '33',
-                   floor: '9',
-                   elevator: 'a',
-                   zipCode: '5948310',
-               },
-               email: 'timortartakovsky@gmail.com',
-               deliveryMethod: 'fast',
-            }
-        };
 
-        OrderHttpService.createNewOrder(JSON.stringify(order))
-            .then(() => this.setState({loading: false, purchasing: false}))
-            .catch(() => this.setState({loading: false, purchasing: false}));
+        const queryParams = [];
+
+        for(let ingredient in this.state.ingredients) {
+            queryParams.push(`${
+                encodeURIComponent(ingredient)
+            }=${
+                encodeURIComponent(this.state.ingredients[ingredient])
+            }`);
+        }
+
+        this.props.history.push({
+            pathname: '/checkout',
+            search: `?${ queryParams.join('&') }`
+        });
+        // temp
+        // this.setState({loading: true});
+        // const order = {
+        //     ingredients: this.state.ingredients,
+        //     price: this.state.totalPrice,
+        //     customer: {
+        //        fullName: 'Timor Tartakovsky',
+        //        address: {
+        //            country: 'Israel',
+        //            city: 'Bat Yam',
+        //            street: 'Balfor 11',
+        //            apt: '33',
+        //            floor: '9',
+        //            elevator: 'a',
+        //            zipCode: '5948310',
+        //        },
+        //        email: 'timortartakovsky@gmail.com',
+        //        deliveryMethod: 'fast',
+        //     }
+        // };
+        //
+        // OrderHttpService.createNewOrder(JSON.stringify(order))
+        //     .then(() => this.setState({loading: false, purchasing: false}))
+        //     .catch(() => this.setState({loading: false, purchasing: false}));
     }
 
     purchaseHandler = () => {

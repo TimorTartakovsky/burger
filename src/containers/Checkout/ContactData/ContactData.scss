@@ -1,0 +1,27 @@
+$contact-data-width: 80%;
+$contact-data-margin: 20px auto;
+$contact-data-box-shadow: 0 2px 3px #ccc;
+$contact-data-border: 1px solid #eee;
+$contact-data-screen-min-width-600: 600px;
+$contact-data-screen-min-width-600-width: 500px;
+
+.contactData {
+  text-align: center;
+  margin: $contact-data-margin;
+  width: $contact-data-width;
+  box-shadow:$contact-data-box-shadow;
+  border: 1px solid #eee;
+  padding: 10px;
+  box-sizing: border-box;
+  .inputElement {
+    display: block;
+  }
+}
+
+@media (min-width: $contact-data-screen-min-width-600) {
+  .contactData {
+    width: $contact-data-screen-min-width-600-width;
+  }
+}
+
+

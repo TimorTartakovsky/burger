@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0d1d9dfe-fe62-4ae1-8d59-2b7d74186680" name="Error handler" comment="">
-      <change afterPath="$PROJECT_DIR$/src/hoc/withErrorHandling/WithErrorHandler.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/ingredients/http-ingredients-service.js" afterDir="false" />
+    <list default="true" id="0d1d9dfe-fe62-4ae1-8d59-2b7d74186680" name="Error handler" comment="Error handler">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/consts/http_consts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/consts/http_consts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/BurgerBuilder/BurgerBuilder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/BurgerBuilder/BurgerBuilder.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/messages/ApplicationMessages.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/messages/ApplicationMessages.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/axios-service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/axios-service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hoc/withErrorHandling/WithErrorHandler.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hoc/withErrorHandling/WithErrorHandler.js" afterDir="false" />
     </list>
     <list id="32ff40e2-068a-4ff8-9a88-d1fedc0edecd" name="ignore" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -87,7 +82,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="js" value="129" />
+          <entry key="js" value="130" />
           <entry key="png" value="1" />
           <entry key="scss" value="42" />
           <entry key="ts" value="2" />
@@ -96,21 +91,21 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Image" value="1" />
-          <entry key="JavaScript" value="129" />
+          <entry key="JavaScript" value="130" />
           <entry key="SCSS" value="42" />
           <entry key="TypeScript" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="js" value="7800" />
+          <entry key="js" value="7894" />
           <entry key="scss" value="2276" />
           <entry key="txt" value="119" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JavaScript" value="7800" />
+          <entry key="JavaScript" value="7894" />
           <entry key="PLAIN_TEXT" value="119" />
           <entry key="SCSS" value="2276" />
         </counts>
@@ -124,32 +119,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/hoc/withErrorHandling/WithErrorHandler.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="14" column="19" lean-forward="true" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/containers/BurgerBuilder/BurgerBuilder.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="27" column="13" lean-forward="true" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/consts/http_consts.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="40" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="40" />
+            <state relative-caret-position="357">
+              <caret line="24" column="71" lean-forward="true" selection-start-line="24" selection-start-column="71" selection-end-line="24" selection-end-column="71" />
             </state>
           </provider>
         </entry>
@@ -242,9 +216,9 @@
         <option value="$PROJECT_DIR$/src/services/orders/http-order-service.js" />
         <option value="$PROJECT_DIR$/src/services/axios-service.js" />
         <option value="$PROJECT_DIR$/src/services/ingredients/http-ingredients-service.js" />
-        <option value="$PROJECT_DIR$/src/hoc/withErrorHandling/WithErrorHandler.js" />
         <option value="$PROJECT_DIR$/src/containers/BurgerBuilder/BurgerBuilder.js" />
         <option value="$PROJECT_DIR$/src/consts/http_consts.js" />
+        <option value="$PROJECT_DIR$/src/hoc/withErrorHandling/WithErrorHandler.js" />
       </list>
     </option>
   </component>
@@ -290,26 +264,14 @@
               <item name="burger" type="b2602c69:ProjectViewProjectNode" />
               <item name="burger" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="consts" type="462c0819:PsiDirectoryNode" />
+              <item name="hoc" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="burger" type="b2602c69:ProjectViewProjectNode" />
               <item name="burger" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="containers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="burger" type="b2602c69:ProjectViewProjectNode" />
-              <item name="burger" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="containers" type="462c0819:PsiDirectoryNode" />
-              <item name="BurgerBuilder" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="burger" type="b2602c69:ProjectViewProjectNode" />
-              <item name="burger" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="services" type="462c0819:PsiDirectoryNode" />
+              <item name="hoc" type="462c0819:PsiDirectoryNode" />
+              <item name="withErrorHandling" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -323,7 +285,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1536568381842" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1536569758324" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="SCSS" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -546,20 +508,27 @@
       <option name="presentableId" value="LOCAL-00023" />
       <option name="project" value="LOCAL" />
       <updated>1536562831415</updated>
-      <workItem from="1536562831521" duration="5017000" />
+      <workItem from="1536562831521" duration="6169000" />
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Error handler">
+      <created>1536568390929</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1536568390929</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <option name="trackContextForNewChangelist" value="true" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56853000" />
+    <option name="totallyTimeSpent" value="58005000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15245202" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15245202" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -574,7 +543,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="7" visible="true" weight="0.2516269" />
+      <window_info anchor="bottom" id="Version Control" order="7" visible="true" weight="0.2516269" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.329718" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
@@ -602,7 +571,8 @@
     <MESSAGE value="project structure" />
     <MESSAGE value="small improvements" />
     <MESSAGE value="checked" />
-    <option name="LAST_COMMIT_MESSAGE" value="checked" />
+    <MESSAGE value="Error handler" />
+    <option name="LAST_COMMIT_MESSAGE" value="Error handler" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
   </component>
   <component name="editorHistoryManager">
@@ -977,13 +947,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/hoc/withErrorHandling/WithErrorHandler.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="14" column="19" lean-forward="true" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/containers/BurgerBuilder/BurgerBuilder.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -998,6 +961,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="40" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hoc/withErrorHandling/WithErrorHandler.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="24" column="71" lean-forward="true" selection-start-line="24" selection-start-column="71" selection-end-line="24" selection-end-column="71" />
         </state>
       </provider>
     </entry>

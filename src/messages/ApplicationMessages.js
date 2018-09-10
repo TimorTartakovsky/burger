@@ -26,7 +26,8 @@ const ApplicationMessages = {
     navigationItems: {
        burgerBuilder: 'Burger Builder',
        checkout: 'Checkout'
-    }
+    },
+    loadingMessage: 'Loading...',
 }
 
 export default  ApplicationMessages;

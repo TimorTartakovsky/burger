@@ -1,0 +1,17 @@
+$checkout-screen-min-width-600: 600px;
+$checkout-screen-min-width-600-width: 500px;
+$checkout-summary-width: 80%;
+
+.checkoutSummary {
+  text-align: center;
+  margin: auto;
+  width: $checkout-summary-width;
+}
+
+@media (min-width: $checkout-screen-min-width-600) {
+  .checkoutSummary {
+    width: $checkout-screen-min-width-600-width;
+  }
+}
+
+

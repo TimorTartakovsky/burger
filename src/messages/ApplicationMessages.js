@@ -23,6 +23,10 @@ const ApplicationMessages = {
         defaultDescription: 'A delicious burger with the following ingredients:',
         continueCheck: 'Continue to Checkout?',
     },
+    checkoutComponent: {
+        cancelBtn: 'CANCEL',
+        continueBtn: 'CONTINUE',
+    },
     navigationItems: {
        burgerBuilder: 'Burger Builder',
        checkout: 'Checkout'

@@ -5,3 +5,7 @@ export const HTTP_ORDER_CONST = {
     createOrderUrl: '/orders.json',
 }
 
+export const HTTP_INGREDIENTS_CONST = {
+    getAllIngredients: 'ingredients.json'
+}
+

@@ -28,6 +28,7 @@ const ApplicationMessages = {
        checkout: 'Checkout'
     },
     loadingMessage: 'Loading...',
+    withErrorHandlerMessage: 'Something wrong. Try it again later.'
 }
 
 export default  ApplicationMessages;

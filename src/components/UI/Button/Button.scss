@@ -2,6 +2,8 @@ $button-padding: 10px;
 $button-margin: $button-padding;
 $button-margin-left: 0;
 $button-padding-left: $button-margin-left;
+$button-disabled-color: #ccc;
+
 .button {
   background-color: transparent;
   border: none;
@@ -13,6 +15,10 @@ $button-padding-left: $button-margin-left;
   padding: $button-padding;
   margin: $button-margin;
 
+  &:disabled {
+    cursor: not-allowed;
+    color: $button-disabled-color;
+  }
   &:first-of-type {
     margin-left: $button-margin-left;
     padding-left: $button-padding-left;

@@ -6,6 +6,8 @@ $input-common-background-color: #ccc;
 $input-element-border: 1px solid $input-common-background-color;
 $input-element-background-color: #fff;
 $input-element-padding: 6px 10px;
+$input-invalid: 1px solid #ff0000;
+$input-background-color: #fa8072;
 
 .input {
   box-sizing: border-box;
@@ -27,10 +29,17 @@ $input-element-padding: 6px 10px;
     background-color: $input-element-background-color;
     padding: $input-element-padding;
     width: $input-width;
+
     &:focus {
       outline: none;
       background-color: $input-common-background-color;
     }
+
+    &.invalid {
+      border: $input-invalid;
+      background-color: $input-background-color;
+    }
+
   }
 
 }

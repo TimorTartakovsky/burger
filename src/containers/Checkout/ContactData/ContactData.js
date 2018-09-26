@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ApplicationMessages from "../../../messages/ApplicationMessages";
 import Button from '../../../components/UI/Button/Button';
-import {BTN_TYPES, inputTypes} from "../../../consts/application_consts";
+import {BTN_TYPES, defaultConfigurationData, inputTypes} from "../../../consts/application_consts";
 import OrderHttpService from '../../../services/orders/http-order-service';
 import Spinner from '../../../components/UI/Spinner/Spinner';
 import classes from './ContactData.scss';
@@ -11,40 +11,22 @@ import Input from '../../../components/UI/Input/Input';
 class ContactData extends Component {
 
     state = {
-      fullName: '',
-      email: '',
-      address: {
-          apt: '',
-          city: '',
-          country: '',
-          elevator: '',
-          floor: '',
-          street: '',
-          zipCode: ''
-      },
+      orderForm: defaultConfigurationData,
+      formIsValid: true,
       loading: false
     };
 
     orderHandler = (event) => {
         event.preventDefault();
         this.setState({loading: true});
+        const formData = {};
+        for(let formElementIdentifier in this.state.orderForm) {
+            formData[formElementIdentifier] = this.state.orderForm[formElementIdentifier].value;
+        }
         const order = {
             ingredients: this.props.ingredients,
             price: this.props.price,
-            customer: {
-               fullName: 'Timor Tartakovsky',
-               address: {
-                   country: 'Israel',
-                   city: 'Bat Yam',
-                   street: 'Balfor 11',
-                   apt: '33',
-                   floor: '9',
-                   elevator: 'a',
-                   zipCode: '5948310',
-               },
-               email: 'timortartakovsky@gmail.com',
-               deliveryMethod: 'fast',
-            }
+            orderData: formData
         };
 
         OrderHttpService.createNewOrder(JSON.stringify(order))
@@ -56,43 +38,60 @@ class ContactData extends Component {
 
     }
 
+    checkValidity(value, rules) {
+        if(!!rules && !!rules.required) {
+            return value.trim() !== '';
+        }
+        return true;
+    }
+
+    inputChangedHandler = (event, inputIdentifier) => {
+        const updatedOrderForm = {
+            ...this.state.orderForm
+        };
+        const updatedFormElement = {
+            ...updatedOrderForm[inputIdentifier]
+        };
+        updatedFormElement.value = event.target.value;
+        updatedFormElement.valid = this.checkValidity(updatedFormElement.value, updatedFormElement.validation);
+        updatedOrderForm[inputIdentifier] = updatedFormElement;
+
+        let formIsValid = false;
+
+        for(inputIdentifier in updatedOrderForm) {
+            formIsValid = updatedOrderForm[inputIdentifier].valid && formIsValid;
+        }
+
+        this.setState({orderForm: updatedOrderForm, formIsValid: formIsValid});
+    }
+
     render() {
 
-        let form = (<form >
-            <Input inputType={ inputTypes.input }
-                   type='text'
-                   name='fullName'
-                   placeholder={ ApplicationMessages.contactDataComponent.form.fullNamePlaceholder }/>
-            <Input inputType={ inputTypes.input }
-                   type='text'
-                   name='apt'
-                   placeholder={ ApplicationMessages.contactDataComponent.form.aptPlaceholder }/>
-            <Input inputType={ inputTypes.input }
-                   type='text'
-                   name='city'
-                   placeholder={ ApplicationMessages.contactDataComponent.form.cityPlaceholder }/>
-            <Input inputType={ inputTypes.input }
-                   type='text'
-                   name='country'
-                   placeholder={ ApplicationMessages.contactDataComponent.form.countryPlaceholder }/>
-            <Input inputType={ inputTypes.input }
-                   type='text'
-                   name='elevator'
-                   placeholder={ ApplicationMessages.contactDataComponent.form.elevatorPlaceholder }/>
-            <Input inputType={ inputTypes.input }
-                   type='text'
-                   name='floor'
-                   placeholder={ ApplicationMessages.contactDataComponent.form.floorPlaceholder }/>
-            <Input inputType={ inputTypes.input }
-                   type='text'
-                   name='street'
-                   placeholder={ ApplicationMessages.contactDataComponent.form.streetPlaceholder }/>
-            <Input inputType={ inputTypes.input }
-                   type='text'
-                   name='zipCode'
-                   placeholder={ ApplicationMessages.contactDataComponent.form.zipCodePlaceholder }/>
-            <Button clicked={ this.orderHandler }
-                    btnType={ BTN_TYPES.success }>
+        const formElementsArray = [];
+
+        for(let key in this.state.orderForm) {
+            formElementsArray.push(
+                {
+                    id: key,
+                    config: this.state.orderForm[key],
+                }
+            );
+        }
+
+        let form = (<form onSubmit={ this.orderHandler } >
+            { formElementsArray.map(
+                formElement => (
+                    <Input  key={ formElement.id }
+                            invalid={ !formElement.config.valid }
+                            elementType={ formElement.config.elementType }
+                            elementConfig={ formElement.config.elementConfig }
+                            changed={ event => this.inputChangedHandler(event, formElement.id) }
+                            value={ formElement.config.value }
+                             />
+                )
+            ) }
+            <Button btnType={ BTN_TYPES.success }
+                    disabled={ this.state.formIsValid } >
                 { ApplicationMessages.contactDataComponent.orderBtn }
             </Button>
         </form>);

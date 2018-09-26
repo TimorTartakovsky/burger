@@ -31,8 +31,14 @@ class OrderSummary extends Component{
                 </ul>
                 <p><strong>{ ApplicationMessages.orderSummaryComponent.totalPrice + this.props.price.toFixed(2)}</strong></p>
                 <p>{ ApplicationMessages.orderSummaryComponent.continueCheck }</p>
-                <Button clicked={ this.props.purchaseCanceled } btnType={ BTN_TYPES.danger }>{ ApplicationMessages.orderSummaryComponent.cancelBtn }</Button>
-                <Button clicked={ this.props.purchaseContinued } btnType={ BTN_TYPES.success }>{ ApplicationMessages.orderSummaryComponent.continueBtn }</Button>
+                <Button clicked={ this.props.purchaseCanceled }
+                        btnType={ BTN_TYPES.danger }>
+                    { ApplicationMessages.orderSummaryComponent.cancelBtn }
+                </Button>
+                <Button clicked={ this.props.purchaseContinued }
+                        btnType={ BTN_TYPES.success }>
+                    { ApplicationMessages.orderSummaryComponent.continueBtn }
+                </Button>
             </Aux>
         )
     }

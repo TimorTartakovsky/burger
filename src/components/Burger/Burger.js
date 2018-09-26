@@ -6,6 +6,7 @@ import ApplicationMessages from "../../messages/ApplicationMessages";
 
 
 const transformIngredients = (ingredients) => {
+;
     if (!!ingredients) {
         return Object.keys(ingredients)
             .map( ingredientKey => {

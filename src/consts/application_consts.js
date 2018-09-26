@@ -27,4 +27,10 @@ export const BTN_TYPES = {
     danger: 'danger',
 };
 
+export const inputTypes = {
+    input: 'input',
+    textArea: 'textarea'
+}
+
+
 

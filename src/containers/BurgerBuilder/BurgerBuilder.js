@@ -5,7 +5,6 @@ import BuildControls from '../../components/Burger/BuildControls/BuildControls';
 import Modal from '../../components/UI/Modal/Modal';
 import OrderSummary from '../../components/Burger/OrderSummary/OrderSummary';
 import {INGREDIENT_PRICES} from "../../consts/application_consts";
-import OrderHttpService from '../../services/orders/http-order-service';
 import axios from '../../services/axios-service';
 import WithErrorHandler from '../../hoc/withErrorHandling/WithErrorHandler';
 import Spinner from '../../components/UI/Spinner/Spinner';
@@ -86,35 +85,11 @@ class BurgerBuilder extends Component {
                 encodeURIComponent(this.state.ingredients[ingredient])
             }`);
         }
-
+        queryParams.push(`price=${ this.state.totalPrice }`);
         this.props.history.push({
             pathname: '/checkout',
             search: `?${ queryParams.join('&') }`
         });
-        // temp
-        // this.setState({loading: true});
-        // const order = {
-        //     ingredients: this.state.ingredients,
-        //     price: this.state.totalPrice,
-        //     customer: {
-        //        fullName: 'Timor Tartakovsky',
-        //        address: {
-        //            country: 'Israel',
-        //            city: 'Bat Yam',
-        //            street: 'Balfor 11',
-        //            apt: '33',
-        //            floor: '9',
-        //            elevator: 'a',
-        //            zipCode: '5948310',
-        //        },
-        //        email: 'timortartakovsky@gmail.com',
-        //        deliveryMethod: 'fast',
-        //     }
-        // };
-        //
-        // OrderHttpService.createNewOrder(JSON.stringify(order))
-        //     .then(() => this.setState({loading: false, purchasing: false}))
-        //     .catch(() => this.setState({loading: false, purchasing: false}));
     }
 
     purchaseHandler = () => {

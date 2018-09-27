@@ -1,4 +1,5 @@
 import * as actionTypes from '../actions/actionTypes';
+import * as utils from '../utility';
 
 const initialState = {
   orders: [],
@@ -9,43 +10,26 @@ const initialState = {
 const reducer = (state = initialState, action) => {
     switch (action.type) {
         case actionTypes.FETCH_ORDERS_START:
-            return {
-                ...state,
-                loading: true,
-            }
+            return utils.updateObject(state, { loading: true });
         case actionTypes.FETCH_ORDERS_SUCCESS:
-            return {
-                ...state,
-                loading: false,
-                orders: action.payload.orders,
-            }
+            return utils.updateObject(state, { loading: false, orders: action.payload.orders });
         case actionTypes.FETCH_ORDERS_FAIL:
-            return {
-                ...state,
-                loading: false,
-            }
+            return utils.updateObject(state, { loading: false });
         case actionTypes.PURCHASE_INIT:
-            return {
-                ...state,
-                purchased: false
-            };
+            return utils.updateObject(state, { purchased: true });
         case actionTypes.PURCHASE_BURGER_START:
-            return {
-                ...state,
-                loading: true,
-            };
+            return utils.updateObject(state, { loading: true });
         case actionTypes.PURCHASE_BURGER_SUCCESS:
-            return {
-                ...state,
-                loading: false,
-                purchased: true,
-                orders: state.orders.concat(action.payload),
-            };
+            return utils.updateObject(
+                    state,
+                    {
+                        loading: false,
+                        purchased: true,
+                        orders: state.orders.concat(action.payload),
+                    }
+                );
         case actionTypes.PURCHASE_BURGER_FAIL:
-            return {
-                ...state,
-                loading: false,
-            };
+            return utils.updateObject(state, { loading: false });
         default: return state;
     }
 }

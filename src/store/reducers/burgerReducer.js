@@ -1,5 +1,7 @@
 import * as actionTypes from '../actions/actionTypes';
 import {INGREDIENT_PRICES} from "../../consts/application_consts";
+import * as utils from '../utility';
+
 
 const initialState = {
     ingredients: null,
@@ -11,40 +13,38 @@ const burgerReducer = (state = initialState, action) => {
 
     switch (action.type) {
         case actionTypes.ADD_INGREDIENT:
-            return {
-                ...state,
-                ingredients: {
-                    ...state.ingredients,
-                    [action.payload.ingredientName]: ++state.ingredients[action.payload.ingredientName]
-                },
+            const addedIngredient = {[action.payload.ingredientName]: ++state.ingredients[action.payload.ingredientName]};
+            const updatedAddedIngredients = utils.updateObject(state.ingredients, addedIngredient);
+            const updatedAddedIngredientState = {
+                ingredients: updatedAddedIngredients,
                 totalPrice: state.totalPrice + INGREDIENT_PRICES[action.payload.ingredientName],
             };
+            return utils.updateObject(state, updatedAddedIngredientState);
         case actionTypes.REMOVE_INGREDIENT:
-            return {
-                ...state,
-                ingredients: {
-                    ...state.ingredients,
-                    [action.payload.ingredientName]: --state.ingredients[action.payload.ingredientName]
-                },
-                totalPrice: state.totalPrice - INGREDIENT_PRICES[action.payload.ingredientName],
+            const removedIngredient = {[action.payload.ingredientName]: --state.ingredients[action.payload.ingredientName]};
+            const updatedRemovedIngredients = utils.updateObject(state.ingredients, removedIngredient);
+            const updatedRemovedState = {
+                ingredients: updatedRemovedIngredients,
+                totalPrice: state.totalPrice + INGREDIENT_PRICES[action.payload.ingredientName],
             };
+            return utils.updateObject(state, updatedRemovedState);
         case actionTypes.SET_INGREDIENT:
-            return {
-                ...state,
-                ingredients: {
-                    salad:  action.payload.ingredients.salad,
-                    bacon:  action.payload.ingredients.bacon,
-                    cheese:  action.payload.ingredients.cheese,
-                    meat:  action.payload.ingredients.meat,
-                },
-                totalPrice: 4,
-                error: false
-            };
+            return utils.updateObject(
+                state,
+                {
+                    ingredients: {
+                        salad:  action.payload.ingredients.salad,
+                        bacon:  action.payload.ingredients.bacon,
+                        cheese:  action.payload.ingredients.cheese,
+                        meat:  action.payload.ingredients.meat,
+                    },
+                    totalPrice: 4,
+                    error: false
+                }
+            );
+
         case actionTypes.FETCH_INGREDIENT_FAIL:
-            return {
-                ...state,
-                error: true
-            };
+            return utils.updateObject(state, { error: true });
         default: return state;
     }
 

@@ -1,5 +1,5 @@
 import axios from '../axios-service';
-import {HTTP_ORDER_CONST} from "../../consts/http_consts";
+import {HTTP_ORDER_CONST} from "../../consts/httpConsts";
 
 class OrderHttpService {
 

@@ -1,5 +1,5 @@
 import axios from '../axios-service';
-import {FIREBASE_ROOT_URL, HTTP_INGREDIENTS_CONST} from "../../consts/http_consts";
+import {FIREBASE_ROOT_URL, HTTP_INGREDIENTS_CONST} from "../../consts/httpConsts";
 
 class IngredientsHttpService {
 

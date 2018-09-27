@@ -1,7 +1,7 @@
 import React from 'react';
 import Burger from '../../Burger/Burger';
 import Button from '../../UI/Button/Button';
-import {BTN_TYPES} from "../../../consts/application_consts";
+import {BTN_TYPES} from "../../../consts/applicationConsts";
 import ApplicationMessages from "../../../messages/ApplicationMessages";
 import classes from './CheckoutSummary.scss';
 

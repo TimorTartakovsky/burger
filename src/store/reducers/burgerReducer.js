@@ -1,5 +1,5 @@
 import * as actionTypes from '../actions/actionTypes';
-import {INGREDIENT_PRICES} from "../../consts/application_consts";
+import {INGREDIENT_PRICES} from "../../consts/applicationConsts";
 import * as utils from '../utility';
 
 

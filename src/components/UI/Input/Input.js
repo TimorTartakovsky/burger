@@ -1,5 +1,5 @@
 import React from 'react';
-import {inputTypes} from "../../../consts/application_consts";
+import {inputTypes} from "../../../consts/applicationConsts";
 import classes from './Input.scss';
 
 const input = (props) => {

@@ -1,7 +1,7 @@
 import React from 'react';
 import classes from './Burger.scss';
 import BurgerIngredient from "./BurgerIngredients/BurgerIngredient";
-import {BURGER_INGREDIENTS_CONST} from "../../consts/application_consts";
+import {BURGER_INGREDIENTS_CONST} from "../../consts/applicationConsts";
 import ApplicationMessages from "../../messages/ApplicationMessages";
 
 

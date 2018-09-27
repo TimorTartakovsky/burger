@@ -1,7 +1,7 @@
 import React from 'react';
 import classes from './BuildControls.scss';
 import BuildControl from './BuildControl/BuildControl';
-import {BUILDER_CONTROLS} from "../../../consts/application_consts";
+import {BUILDER_CONTROLS} from "../../../consts/applicationConsts";
 import ApplicationMessages from "../../../messages/ApplicationMessages";
 
 const buildControls = (props) => (

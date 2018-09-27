@@ -1,5 +1,8 @@
 
 const ApplicationMessages = {
+    auth: {
+      btnSubmit: 'SUBMIT',
+    },
     burgerBuilderComponent: {
         noIngredients: 'No ingredients defined',
     },
@@ -46,6 +49,7 @@ const ApplicationMessages = {
        burgerBuilder: 'Burger Builder',
        checkout: 'Checkout',
        orders: 'Orders',
+       authenticate: 'Authenticate',
     },
     loadingMessage: 'Loading...',
     withErrorHandlerMessage: 'Something wrong. Try it again later.'

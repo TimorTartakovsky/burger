@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import Aux from '../../../hoc/Auxe/Auxe';
 import Button from '../../UI/Button/Button';
 import ApplicationMessages from "../../../messages/ApplicationMessages";
-import {BTN_TYPES} from "../../../consts/application_consts";
+import {BTN_TYPES} from "../../../consts/applicationConsts";
 
 // Created it as a class only for a learning reason, could be a functional component
 class OrderSummary extends Component{

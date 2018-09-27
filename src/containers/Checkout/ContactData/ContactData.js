@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import ApplicationMessages from "../../../messages/ApplicationMessages";
 import Button from '../../../components/UI/Button/Button';
-import {BTN_TYPES, defaultConfigurationData, inputTypes} from "../../../consts/application_consts";
+import {BTN_TYPES, defaultConfigurationData, inputTypes} from "../../../consts/applicationConsts";
 import Spinner from '../../../components/UI/Spinner/Spinner';
 import classes from './ContactData.scss';
 import Input from '../../../components/UI/Input/Input';

@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { FIREBASE_ROOT_URL } from "../consts/http_consts";
+import { FIREBASE_ROOT_URL } from "../consts/httpConsts";
 
 const instance = axios.create({
     baseURL: FIREBASE_ROOT_URL,

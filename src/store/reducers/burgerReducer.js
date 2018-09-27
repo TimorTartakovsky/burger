@@ -1,17 +1,13 @@
-import * as actionTypes from './actions';
-import {INGREDIENT_PRICES} from "../consts/application_consts";
+import * as actionTypes from '../actions/actionTypes';
+import {INGREDIENT_PRICES} from "../../consts/application_consts";
 
 const initialState = {
-    ingredients: {
-        salad: 0,
-        bacon: 0,
-        cheese: 0,
-        meat: 0,
-    },
-    totalPrice: 4
+    ingredients: null,
+    totalPrice: 4,
+    error: false
 };
 
-const reducer = (state = initialState, action) => {
+const burgerReducer = (state = initialState, action) => {
 
     switch (action.type) {
         case actionTypes.ADD_INGREDIENT:
@@ -34,10 +30,28 @@ const reducer = (state = initialState, action) => {
                 totalPrice: state.totalPrice - INGREDIENT_PRICES[action.payload.ingredientName],
             };
             break;
+        case actionTypes.SET_INGREDIENT:
+            return {
+                ...state,
+                ingredients: {
+                    salad:  action.payload.ingredients.salad,
+                    bacon:  action.payload.ingredients.bacon,
+                    cheese:  action.payload.ingredients.cheese,
+                    meat:  action.payload.ingredients.meat,
+                },
+                error: false
+            };
+            break;
+        case actionTypes.FATCH_INGREDIENT_FAIL:
+            return {
+                ...state,
+                error: true
+            };
+            break;
         default: return state;
     }
 
 };
 
 
-export default reducer;
+export default burgerReducer;

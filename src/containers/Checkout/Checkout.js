@@ -4,30 +4,8 @@ import ContactData from './ContactData/ContactData';
 import CheckoutSummary from '../../components/Order/CheckoutSummary/CheckoutSummary';
 import { connect } from 'react-redux';
 
+
 class Checkout extends Component {
-
-    /*
-        USED to receive a query params.
-        componentWillMount() {
-            const query = new URLSearchParams(this.props.location.search);
-            const updatedIngredients = {};
-            let price = 0;
-
-            for ( let param of query.entries() ) {
-                if (param[0] === 'price') {
-                    price = param[1];
-                } else {
-                    updatedIngredients[param[0]] = +param[1];
-                }
-            }
-            this.setState(
-                {
-                  ingredients: updatedIngredients,
-                  totalPrice: price
-                }
-            );
-        }
-    */
 
     onCheckoutCanceledHandler = () => {
         this.props.history.goBack();
@@ -58,12 +36,12 @@ class Checkout extends Component {
 
 const mapStateToProps = state => {
     return {
-        ingredients: state.ingredients,
-        totalPrice: state.totalPrice,
+        ingredients: state.burgerReducer.ingredients,
+        totalPrice: state.burgerReducer.totalPrice,
+        purchased: state.orderReducer.purchased,
     }
 };
 
-
-export default connect(mapStateToProps) (Checkout);
+export default connect(mapStateToProps)(Checkout);
 
 

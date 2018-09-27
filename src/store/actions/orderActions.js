@@ -33,7 +33,7 @@ export const purchaseBurger = (orderData) => {
         dispatch(purchaseBurgerStart());
         OrderHttpService.createNewOrder(JSON.stringify(orderData))
             .then(response => {
-                dispatch(purchaseOrderSuccess(response.data));
+                dispatch(purchaseOrderSuccess(response.data.name, orderData));
             })
             .catch(error => {
                 dispatch(purchaseOrderFail(error));
@@ -41,7 +41,52 @@ export const purchaseBurger = (orderData) => {
     }
 };
 
+export const purchaseInit = () => {
+    return {
+        type: actionTypes.PURCHASE_INIT,
+    }
+};
 
+export const fetchOrderSuccess = (orders) => {
+  return {
+      type: actionTypes.FETCH_ORDERS_SUCCESS,
+      payload: {
+          orders: orders,
+      }
+  }
+};
 
+export const fetchOrderFail = (error) => {
+    return {
+        type: actionTypes.FETCH_ORDERS_FAIL,
+        payload: {
+            error: error,
+        }
+    }
+};
 
+export const fetchOrderStart = () => {
+    return {
+        type: actionTypes.FETCH_ORDERS_START,
+    }
+};
+
+export const fetchOrders = () => {
+    return dispatch => {
+        OrderHttpService.fetchAllOrders()
+            .then( res => {
+                const fetchedOrders = [];
+                for ( let key in res.data ) {
+                    fetchedOrders.push( {
+                        ...res.data[key],
+                        id: key
+                    } );
+                }
+                dispatch(fetchOrderSuccess(fetchedOrders));
+            } )
+            .catch( err => {
+                dispatch(fetchOrderFail(err));
+            } );
+    };
+}
 

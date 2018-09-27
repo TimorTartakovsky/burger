@@ -7,6 +7,10 @@ class OrderHttpService {
         return axios.post(HTTP_ORDER_CONST.createOrderUrl, order);
     }
 
+    static fetchAllOrders() {
+        return axios.get( '/orders.json' );
+    }
+
 }
 
 

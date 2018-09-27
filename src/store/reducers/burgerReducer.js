@@ -19,7 +19,6 @@ const burgerReducer = (state = initialState, action) => {
                 },
                 totalPrice: state.totalPrice + INGREDIENT_PRICES[action.payload.ingredientName],
             };
-            break;
         case actionTypes.REMOVE_INGREDIENT:
             return {
                 ...state,
@@ -29,7 +28,6 @@ const burgerReducer = (state = initialState, action) => {
                 },
                 totalPrice: state.totalPrice - INGREDIENT_PRICES[action.payload.ingredientName],
             };
-            break;
         case actionTypes.SET_INGREDIENT:
             return {
                 ...state,
@@ -39,15 +37,14 @@ const burgerReducer = (state = initialState, action) => {
                     cheese:  action.payload.ingredients.cheese,
                     meat:  action.payload.ingredients.meat,
                 },
+                totalPrice: 4,
                 error: false
             };
-            break;
         case actionTypes.FETCH_INGREDIENT_FAIL:
             return {
                 ...state,
                 error: true
             };
-            break;
         default: return state;
     }
 

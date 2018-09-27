@@ -44,7 +44,8 @@ const ApplicationMessages = {
     },
     navigationItems: {
        burgerBuilder: 'Burger Builder',
-       checkout: 'Checkout'
+       checkout: 'Checkout',
+       orders: 'Orders',
     },
     loadingMessage: 'Loading...',
     withErrorHandlerMessage: 'Something wrong. Try it again later.'

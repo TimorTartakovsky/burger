@@ -42,7 +42,7 @@ const burgerReducer = (state = initialState, action) => {
                 error: false
             };
             break;
-        case actionTypes.FATCH_INGREDIENT_FAIL:
+        case actionTypes.FETCH_INGREDIENT_FAIL:
             return {
                 ...state,
                 error: true

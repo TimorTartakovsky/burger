@@ -55,7 +55,7 @@ class BurgerBuilder extends Component {
 
         let orderSummary = null;
         let burger = this.props.error ? <p>{ ApplicationMessages.burgerBuilderComponent.noIngredients }</p> : (<Spinner/>);
-        debugger;
+
         if (!!this.props.ingredients) {
             burger =(<Aux>
                         <Burger ingredients={ this.props.ingredients } />

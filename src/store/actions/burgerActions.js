@@ -22,7 +22,7 @@ export const removeIngredient = (name) => {
 
 export const fetchIngredientsFail = () => {
     return {
-        type: actionTypes.FATCH_INGREDIENT_FAIL,
+        type: actionTypes.FETCH_INGREDIENT_FAIL,
     }
 }
 

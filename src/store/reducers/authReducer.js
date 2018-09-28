@@ -13,6 +13,16 @@ const initialState = {
 
 const reducer = (state = initialState, action) => {
     switch (action.type) {
+        case actionTypes.AUTH_LOGOUT:
+            return utils.updateObject(
+                state,
+                {
+                    token: null,
+                    registered: false,
+                    localId: null,
+                    email: '',
+                }
+            );
         case actionTypes.AUTH_START:
             return utils.updateObject(state, { error: null, loading: true });
         case actionTypes.AUTH_SUCCESS:

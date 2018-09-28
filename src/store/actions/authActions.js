@@ -1,5 +1,6 @@
 import * as actionTypes from './actionTypes';
 import axios from 'axios';
+import * as Q from 'q';
 
 export const authStart = () => {
     return {
@@ -23,6 +24,22 @@ export const authFail = (error) => {
     };
 };
 
+export const logout = () => {
+    return {
+        type: actionTypes.AUTH_LOGOUT
+    }
+}
+
+export const checkAuthTimeout = (expirationTime) => {
+    return dispatch => {
+        const defer = Q.defer();
+        defer.resolve();
+        defer.promise
+            .delay(expirationTime)
+            .then(() => dispatch(logout()));
+    };
+};
+
 export const auth = (email, password, isSignUp) => {
     return dispatch => {
         dispatch(authStart());
@@ -38,6 +55,7 @@ export const auth = (email, password, isSignUp) => {
         axios.post(url, authData)
             .then(response => {
                 dispatch(authSuccess(response.data));
+                dispatch(checkAuthTimeout(response.data.expiresIn * 1000));
             })
             .catch(err => {
                 dispatch(authFail(err));

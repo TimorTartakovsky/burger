@@ -2,6 +2,8 @@
 const ApplicationMessages = {
     auth: {
       btnSubmit: 'SUBMIT',
+      btnSignIn: 'SWITCH TO SIGN IN',
+      btnSignUp: 'SWITCH TO SIGN UP',
     },
     burgerBuilderComponent: {
         noIngredients: 'No ingredients defined',

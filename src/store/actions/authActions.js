@@ -10,14 +10,16 @@ export const authStart = () => {
 export const authSuccess = (authData) => {
     return {
         type: actionTypes.AUTH_SUCCESS,
-        authData: authData
+        payload: authData
     };
 };
 
 export const authFail = (error) => {
     return {
         type: actionTypes.AUTH_FAIL,
-        error: error
+        payload: {
+            error: error
+        }
     };
 };
 

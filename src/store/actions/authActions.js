@@ -82,7 +82,7 @@ export const setAuthRedirectPath  = (path) => {
 
 
 const checkDispatchExpirationDatePassed = (dispatch, expDate, token) => {
-    if (expDate.getTime() < new Date().getTime()) {
+    if (expDate < new Date()) {
         dispatch(logout());
     } else {
         const userId = localStorageService.getLocalIdFromLocalStorageData();
@@ -98,8 +98,7 @@ export const authCheckState = () => {
     return dispatch => {
         const token =  localStorageService.getTokenFromLocalStorageData();
         if (token) {
-            const a = localStorageService.getExpFromLocalStorageData();
-            const expirationDate = new Date(a);
+            const expirationDate = new Date(localStorageService.getExpFromLocalStorageData());
             checkDispatchExpirationDatePassed(dispatch, expirationDate, token);
         } else {
             dispatch(logout());

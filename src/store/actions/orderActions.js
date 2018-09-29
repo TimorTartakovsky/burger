@@ -71,10 +71,11 @@ export const fetchOrderStart = () => {
     }
 };
 
-export const fetchOrders = (token) => {
+export const fetchOrders = (token, localId) => {
     return dispatch => {
         dispatch(fetchOrderStart());
-        OrderHttpService.fetchAllOrders(token)
+        const queryParams = encodeURI(`?orderBy=\"localId\"&equalTo=\"${ localId }\"&auth=${ token }`);
+        OrderHttpService.fetchAllOrders(queryParams)
             .then( res => {
                 const fetchedOrders = [];
                 for ( let key in res.data ) {

@@ -7,8 +7,8 @@ class OrderHttpService {
         return axios.post(`${ FIREBASE_ROOT_URL + HTTP_ORDER_CONST.createOrderUrl}?auth=${token}`, order);
     }
 
-    static fetchAllOrders(token) {
-        return axios.get( `${ FIREBASE_ROOT_URL + HTTP_ORDER_CONST.createOrderUrl}?auth=${token}` );
+    static fetchAllOrders(queryParams) {
+        return axios.get( `${ FIREBASE_ROOT_URL + HTTP_ORDER_CONST.createOrderUrl + queryParams }` );
     }
 
 }

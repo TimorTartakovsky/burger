@@ -15,7 +15,10 @@ const navigationItems = (props) => (
                     <NavigationItem link={ INTERNAL_ROADS.logout }>{ ApplicationMessages.navigationItems.logOut }</NavigationItem>
                 </Aux>)
                 :
-                (<NavigationItem link={ INTERNAL_ROADS.auth } >{ ApplicationMessages.navigationItems.authenticate }</NavigationItem>)
+                (<Aux>
+                     <NavigationItem link={ INTERNAL_ROADS.default } exact>{ ApplicationMessages.navigationItems.burgerBuilder }</NavigationItem>
+                     <NavigationItem link={ INTERNAL_ROADS.auth } >{ ApplicationMessages.navigationItems.authenticate }</NavigationItem>
+                </Aux>)
         }
     </ul>
 );

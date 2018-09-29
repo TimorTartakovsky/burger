@@ -1,6 +1,7 @@
 import * as actionTypes from './actionTypes';
 import axios from 'axios';
 import * as Q from 'q';
+import * as localStorageService from "../../services/localStorageService/localStorageService";
 
 export const authStart = () => {
     return {
@@ -25,6 +26,7 @@ export const authFail = (error) => {
 };
 
 export const logout = () => {
+    localStorageService.removeAllLocalStorageData();
     return {
         type: actionTypes.AUTH_LOGOUT
     }
@@ -54,6 +56,13 @@ export const auth = (email, password, isSignUp) => {
         }
         axios.post(url, authData)
             .then(response => {
+                const expirationDate = new Date(new Date().getTime() + response.data.expiresIn * 1000);
+
+                localStorageService.setNewLocalStorageData({
+                    token: response.data.idToken,
+                    exp: expirationDate,
+                    localId: response.data.localId,
+                });
                 dispatch(authSuccess(response.data));
                 dispatch(checkAuthTimeout(response.data.expiresIn * 1000));
             })
@@ -70,6 +79,34 @@ export const setAuthRedirectPath  = (path) => {
         payload: { path },
     }
 }
+
+
+const checkDispatchExpirationDatePassed = (dispatch, expDate, token) => {
+    if (expDate.getTime() < new Date().getTime()) {
+        dispatch(logout());
+    } else {
+        const userId = localStorageService.getLocalIdFromLocalStorageData();
+        dispatch(authSuccess({
+            idToken: token,
+            localId: userId
+        }));
+        dispatch(checkAuthTimeout((expDate.getTime() - new Date().getTime()) / 1000));
+    }
+}
+
+export const authCheckState = () => {
+    return dispatch => {
+        const token =  localStorageService.getTokenFromLocalStorageData();
+        if (token) {
+            const a = localStorageService.getExpFromLocalStorageData();
+            const expirationDate = new Date(a);
+            checkDispatchExpirationDatePassed(dispatch, expirationDate, token);
+        } else {
+            dispatch(logout());
+        }
+    };
+};
+
 
 
 

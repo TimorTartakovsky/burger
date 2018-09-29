@@ -128,7 +128,7 @@ class Auth extends Component {
                 </form>
                 <Button btnType={ BTN_TYPES.danger }
                         clicked={ this.switchAuthModeHandler }>
-                    { this.state.isSignUp ? ApplicationMessages.auth.btnSignUp : ApplicationMessages.auth.btnSignIn }
+                    { this.state.isSignUp ? ApplicationMessages.auth.btnSignIn : ApplicationMessages.auth.btnSignUp }
                 </Button>
             </div>
         );

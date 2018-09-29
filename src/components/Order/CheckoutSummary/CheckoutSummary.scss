@@ -8,10 +8,4 @@ $checkout-summary-width: 80%;
   width: $checkout-summary-width;
 }
 
-@media (min-width: $checkout-screen-min-width-600) {
-  .checkoutSummary {
-    width: $checkout-screen-min-width-600-width;
-  }
-}
-
 

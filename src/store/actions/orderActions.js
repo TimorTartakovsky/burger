@@ -28,10 +28,10 @@ export const purchaseBurgerStart = () => {
 };
 
 
-export const purchaseBurger = (orderData) => {
+export const purchaseBurger = (orderData, token) => {
     return dispatch => {
         dispatch(purchaseBurgerStart());
-        OrderHttpService.createNewOrder(JSON.stringify(orderData))
+        OrderHttpService.createNewOrder(JSON.stringify(orderData), token)
             .then(response => {
                 dispatch(purchaseOrderSuccess(response.data.name, orderData));
             })
@@ -71,9 +71,10 @@ export const fetchOrderStart = () => {
     }
 };
 
-export const fetchOrders = () => {
+export const fetchOrders = (token) => {
     return dispatch => {
-        OrderHttpService.fetchAllOrders()
+        dispatch(fetchOrderStart());
+        OrderHttpService.fetchAllOrders(token)
             .then( res => {
                 const fetchedOrders = [];
                 for ( let key in res.data ) {

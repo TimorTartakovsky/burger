@@ -10,6 +10,7 @@ import Spinner from '../../components/UI/Spinner/Spinner';
 import { connect } from 'react-redux';
 import * as actions from '../../store/actions/index';
 import ApplicationMessages from "../../messages/ApplicationMessages";
+import {INTERNAL_ROADS} from "../../consts/roudListConst";
 
 class BurgerBuilder extends Component {
 
@@ -39,11 +40,16 @@ class BurgerBuilder extends Component {
 
     purchaseContinueHandler = () => {
         this.props.onInitPurchase();
-        this.props.history.push({ pathname: '/checkout' });
+        this.props.history.push({ pathname: INTERNAL_ROADS.checkout });
     }
 
     purchaseHandler = () => {
-        this.setState({purchasing: true});
+        if (this.props.isAuthenticated) {
+            this.setState({purchasing: true});
+        } else {
+            this.props.onSetAuthRedirectPath(INTERNAL_ROADS.checkout);
+            this.props.history.push(INTERNAL_ROADS.auth);
+        }
     }
 
     render() {
@@ -61,6 +67,7 @@ class BurgerBuilder extends Component {
             burger =(<Aux>
                         <Burger ingredients={ this.props.ingredients } />
                         <BuildControls
+                            isAuth={ this.props.isAuthenticated }
                             ingredientAdded={ this.props.onIngredientAdded }
                             ingredientRemoved={ this.props.onIngredientRemoved }
                             ordered={ this.purchaseHandler }
@@ -95,6 +102,7 @@ const mapStateToProps = state => {
         ingredients: state.burgerReducer.ingredients,
         totalPrice: state.burgerReducer.totalPrice,
         error: state.burgerReducer.error,
+        isAuthenticated: !!state.authReducer.token
     }
 }
 
@@ -104,6 +112,7 @@ const mapDispatchToProps = dispatch => {
         onIngredientRemoved: ingName => dispatch(actions.removeIngredient(ingName)),
         onInitIngredients: () => dispatch(actions.initIngredients()),
         onInitPurchase: () => dispatch(actions.purchaseInit()),
+        onSetAuthRedirectPath: (path) => dispatch(actions.setAuthRedirectPath(path)),
     }
 }
 

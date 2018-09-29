@@ -3,6 +3,7 @@ import { Route, Redirect } from 'react-router-dom';
 import ContactData from './ContactData/ContactData';
 import CheckoutSummary from '../../components/Order/CheckoutSummary/CheckoutSummary';
 import { connect } from 'react-redux';
+import {INTERNAL_ROADS} from "../../consts/roudListConst";
 
 
 class Checkout extends Component {
@@ -12,12 +13,12 @@ class Checkout extends Component {
     }
 
     onCheckoutContinuedHandler = () => {
-        this.props.history.replace('/checkout/contact-data');
+        this.props.history.replace(INTERNAL_ROADS.contactData);
     }
 
 
     render() {
-        let summary = <Redirect to='/' />
+        let summary = <Redirect to={ INTERNAL_ROADS.default } />
 
         if (this.props.ingredients) {
             summary = (<div>

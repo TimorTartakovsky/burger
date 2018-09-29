@@ -11,6 +11,7 @@ const ApplicationMessages = {
     buildControlsComponent: {
         currentPrice: 'Current price: ',
         orderButton: 'ORDER NOW',
+        btnSignIn: 'Sign in',
         buildControl: {
             btnLess: 'Less',
             btnMore: 'More',
@@ -52,6 +53,7 @@ const ApplicationMessages = {
        checkout: 'Checkout',
        orders: 'Orders',
        authenticate: 'Authenticate',
+       logOut: 'Logout',
     },
     loadingMessage: 'Loading...',
     withErrorHandlerMessage: 'Something wrong. Try it again later.'

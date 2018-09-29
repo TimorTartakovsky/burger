@@ -5,6 +5,8 @@ import Checkout from './containers/Checkout/Checkout';
 import Orders from './containers/Orders/Orders';
 import Auth from './containers/Auth/Auth';
 import { Route, Switch } from 'react-router-dom';
+import Logout from "./containers/Auth/Logout/Logout";
+import {INTERNAL_ROADS} from "./consts/roudListConst";
 
 class App extends Component {
   render() {
@@ -12,10 +14,11 @@ class App extends Component {
       <div>
         <Layout>
             <Switch>
-                <Route path='/checkout' component={ Checkout } />
-                <Route path='/orders' component={ Orders } />
-                <Route path='/auth' component={ Auth } />
-                <Route path='/' component={ BurgerBuilder } />
+                <Route path={ INTERNAL_ROADS.checkout } component={ Checkout } />
+                <Route path={ INTERNAL_ROADS.orders } component={ Orders } />
+                <Route path={ INTERNAL_ROADS.auth } component={ Auth } />
+                <Route path={ INTERNAL_ROADS.logout } component={ Logout } />
+                <Route path={ INTERNAL_ROADS.default } component={ BurgerBuilder } />
             </Switch>
         </Layout>
       </div>

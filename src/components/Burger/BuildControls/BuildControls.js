@@ -16,11 +16,19 @@ const buildControls = (props) => (
                 disabled={ props.disabled[ctrl.type] }
             />
         )) }
-        <button className={classes.orderButton}
-                onClick={ props.ordered }
-                disabled={ !props.purchasable }>
-            { ApplicationMessages.buildControlsComponent.orderButton }
-        </button>
+        {
+            props.isAuth ?
+                    (<button className={classes.orderButton}
+                             onClick={ props.ordered }
+                             disabled={ !props.purchasable }>
+                        { ApplicationMessages.buildControlsComponent.orderButton }
+                    </button>)
+                    :
+                    (<button className={classes.orderButton}
+                             onClick={ props.ordered }>
+                        { ApplicationMessages.buildControlsComponent.btnSignIn }
+                    </button>)
+        }
     </div>
 
 );

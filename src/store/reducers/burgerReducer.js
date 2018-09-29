@@ -6,7 +6,8 @@ import * as utils from '../utility';
 const initialState = {
     ingredients: null,
     totalPrice: 4,
-    error: false
+    error: false,
+    building: false,
 };
 
 const burgerReducer = (state = initialState, action) => {
@@ -18,6 +19,7 @@ const burgerReducer = (state = initialState, action) => {
             const updatedAddedIngredientState = {
                 ingredients: updatedAddedIngredients,
                 totalPrice: state.totalPrice + INGREDIENT_PRICES[action.payload.ingredientName],
+                building: true,
             };
             return utils.updateObject(state, updatedAddedIngredientState);
         case actionTypes.REMOVE_INGREDIENT:
@@ -26,6 +28,7 @@ const burgerReducer = (state = initialState, action) => {
             const updatedRemovedState = {
                 ingredients: updatedRemovedIngredients,
                 totalPrice: state.totalPrice + INGREDIENT_PRICES[action.payload.ingredientName],
+                building: true,
             };
             return utils.updateObject(state, updatedRemovedState);
         case actionTypes.SET_INGREDIENT:
@@ -39,7 +42,8 @@ const burgerReducer = (state = initialState, action) => {
                         meat:  action.payload.ingredients.meat,
                     },
                     totalPrice: 4,
-                    error: false
+                    error: false,
+                    building: false,
                 }
             );
 
